@@ -1,0 +1,25 @@
+body {
+  background-color:  #C5A99C ;
+}
+
+h2, h3 {
+  font-weight: lighter;
+  font-style: oblique;
+  font-family: fantasy;
+  color: #47382B;
+}
+
+img {
+  width: 200px;
+  height: 150px;
+}
+/*
+.checkbox {
+  align-items: baseline;
+}*/
+
+input {
+    margin:0;
+    vertical-align: bottom;
+    position: relative;
+}
