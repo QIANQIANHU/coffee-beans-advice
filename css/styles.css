@@ -7,6 +7,19 @@ h2, h3 {
   font-style: oblique;
   font-family: fantasy;
   color: #47382B;
+  margin: 15px;
+}
+
+.btn-primary {
+    background-color: #47382B;
+}
+
+.btn-secondary{
+  background-color: #B49B90;
+}
+
+button {
+  margin: 10px;
 }
 
 img {
