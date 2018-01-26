@@ -1,13 +1,28 @@
+.drinkForm, .starterForm, .mainCourseForm, .dessertForm,.submitAllForms,.story {
+  display: none;
+}
+
+
 body {
   background-color:  #C5A99C ;
 }
 
 h2, h3 {
+  text-align: center;
   font-weight: lighter;
   font-style: oblique;
   font-family: fantasy;
   color: #47382B;
   margin: 15px;
+}
+
+.clickable {
+  cursor: pointer;
+  color: #0088cc;
+}
+
+.clickable:hover {
+  text-decoration: underline;
 }
 
 .btn-primary {
@@ -19,6 +34,7 @@ h2, h3 {
 }
 
 button {
+  text-align: center;
   margin: 10px;
 }
 

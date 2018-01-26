@@ -10,193 +10,204 @@
   <body>
     <div class="container">
       <h2>What do you want for your dinner today?</h1>
+      <h3 class="hideAfterClick"><span class="clickable">Click here </span> to order!</h3>
+
       <form id="formOne">
 
-        <h3>Order a drink</h3>
-        <div class="row">
-          <div class="col-md-2.4">
-            <div class="checkbox">
-              <label>
-                <img src="img/drink/drink1.jpeg" alt="cheese plate picture">
-                <input type="checkbox" name="drink" value="1,2,3,4" checked>
-              </label>
+        <div class="drinkForm">
+          <h3>Order the drink</h3>
+          <div class="row">
+            <div class="col-md-2.4">
+              <div class="checkbox">
+                <label>
+                  <img src="img/drink/drink1.jpeg" alt="cheese plate picture">
+                  <input type="checkbox" name="drink" value="1,2,3,4" checked>
+                </label>
+              </div>
+            </div>
+            <div class="col-md-2.4">
+              <div class="checkbox">
+                <label>
+                  <img src="img/drink/drink2.jpeg" alt="">
+                  <input type="checkbox" name="drink" value="">
+                </label>
+              </div>
+            </div>
+            <div class="col-md-2.4">
+              <div class="checkbox">
+                <label>
+                  <img src="img/drink/drink3.jpeg" alt="">
+                  <input type="checkbox" name="drink" value="">
+                </label>
+              </div>
+            </div>
+            <div class="col-md-2.4">
+              <div class="checkbox">
+                <label>
+                  <img src="img/drink/drink4.jpeg" alt="">
+                  <input type="checkbox" name="drink" value="">
+                </label>
+              </div>
+            </div>
+            <div class="col-md-2.4">
+              <div class="checkbox">
+                <label>
+                  <img src="img/drink/drink5.jpeg" alt="">
+                  <input type="checkbox" name="drink" value="">
+                </label>
+              </div>
             </div>
           </div>
-          <div class="col-md-2.4">
-            <div class="checkbox">
-              <label>
-                <img src="img/drink/drink2.jpeg" alt="">
-                <input type="checkbox" name="drink" value="">
-              </label>
-            </div>
-          </div>
-          <div class="col-md-2.4">
-            <div class="checkbox">
-              <label>
-                <img src="img/drink/drink3.jpeg" alt="">
-                <input type="checkbox" name="drink" value="">
-              </label>
-            </div>
-          </div>
-          <div class="col-md-2.4">
-            <div class="checkbox">
-              <label>
-                <img src="img/drink/drink4.jpeg" alt="">
-                <input type="checkbox" name="drink" value="">
-              </label>
-            </div>
-          </div>
-          <div class="col-md-2.4">
-            <div class="checkbox">
-              <label>
-                <img src="img/drink/drink5.jpeg" alt="">
-                <input type="checkbox" name="drink" value="">
-              </label>
-            </div>
-          </div>
+          <button type="button" name="button" id="clickToStarter" class="btn btn-primary btn-sm">next</button>
         </div>
-        <button type="button" name="button" class="btn btn-primary btn-sm">next</button>
 
-        <h3>Order your stater</h3>
-        <div class="row">
-          <div class="col-md-2.4">
-            <div class="checkbox">
-              <label>
-                <img src="img/starter/starter1.jpeg" alt="cheese plate picture">
-                <input type="checkbox" name="stater" value="1,2,3,4" checked>
-              </label>
+        <div class="starterForm">
+          <h3>Order your staters</h3>
+          <div class="row">
+            <div class="col-md-2.4">
+              <div class="checkbox">
+                <label>
+                  <img src="img/starter/starter1.jpeg" alt="cheese plate picture">
+                  <input type="checkbox" name="stater" value="1,2,3,4" checked>
+                </label>
+              </div>
+            </div>
+            <div class="col-md-2.4">
+              <div class="checkbox">
+                <label>
+                  <img src="img/starter/starter2.jpeg" alt="">
+                  <input type="checkbox" name="stater" value="">
+                </label>
+              </div>
+            </div>
+            <div class="col-md-2.4">
+              <div class="checkbox">
+                <label>
+                  <img src="img/starter/starter3.jpeg" alt="">
+                  <input type="checkbox" name="stater" value="">
+                </label>
+              </div>
+            </div>
+            <div class="col-md-2.4">
+              <div class="checkbox">
+                <label>
+                  <img src="img/starter/starter4.jpeg" alt="">
+                  <input type="checkbox" name="stater" value="">
+                </label>
+              </div>
+            </div>
+            <div class="col-md-2.4">
+              <div class="checkbox">
+                <label>
+                  <img src="img/starter/starter5.jpeg" alt="">
+                  <input type="checkbox" name="stater" value="">
+                </label>
+              </div>
             </div>
           </div>
-          <div class="col-md-2.4">
-            <div class="checkbox">
-              <label>
-                <img src="img/starter/starter2.jpeg" alt="">
-                <input type="checkbox" name="stater" value="">
-              </label>
-            </div>
-          </div>
-          <div class="col-md-2.4">
-            <div class="checkbox">
-              <label>
-                <img src="img/starter/starter3.jpeg" alt="">
-                <input type="checkbox" name="stater" value="">
-              </label>
-            </div>
-          </div>
-          <div class="col-md-2.4">
-            <div class="checkbox">
-              <label>
-                <img src="img/starter/starter4.jpeg" alt="">
-                <input type="checkbox" name="stater" value="">
-              </label>
-            </div>
-          </div>
-          <div class="col-md-2.4">
-            <div class="checkbox">
-              <label>
-                <img src="img/starter/starter5.jpeg" alt="">
-                <input type="checkbox" name="stater" value="">
-              </label>
-            </div>
-          </div>
+          <button type="button" name="button" id="clickToMainCourse" class="btn btn-primary btn-sm">next</button>
+          <button type="button" name="button" id="clickBackToDrink" class="btn btn-secondary btn-sm">go back</button>
         </div>
-      <button type="button" name="button" class="btn btn-primary btn-sm">next</button><button type="button" name="button" class="btn btn-secondary btn-sm">go back</button>
 
-      <h3>Order a main-course</h3>
-      <div class="row">
-        <div class="col-md-2.4">
-          <div class="checkbox">
-            <label>
-              <img src="img/main-course/main-course1.jpeg" alt="cheese plate picture">
-              <input type="checkbox" name="main-course" value="1,2,3,4" checked>
-            </label>
+        <div class="mainCourseForm">
+          <h3>Order the main-course</h3>
+          <div class="row">
+            <div class="col-md-2.4">
+              <div class="checkbox">
+                <label>
+                  <img src="img/main-course/main-course1.jpeg" alt="cheese plate picture">
+                  <input type="checkbox" name="main-course" value="1,2,3,4" checked>
+                </label>
+              </div>
+            </div>
+            <div class="col-md-2.4">
+              <div class="checkbox">
+                <label>
+                  <img src="img/main-course/main-course2.jpeg" alt="">
+                  <input type="checkbox" name="main-course" value="">
+                </label>
+              </div>
+            </div>
+            <div class="col-md-2.4">
+              <div class="checkbox">
+                <label>
+                  <img src="img/main-course/main-course3.jpeg" alt="">
+                  <input type="checkbox" name="main-course" value="">
+                </label>
+              </div>
+            </div>
+            <div class="col-md-2.4">
+              <div class="checkbox">
+                <label>
+                  <img src="img/main-course/main-course4.jpeg" alt="">
+                  <input type="checkbox" name="main-course" value="">
+                </label>
+              </div>
+            </div>
+            <div class="col-md-2.4">
+              <div class="checkbox">
+                <label>
+                  <img src="img/main-course/main-course5.jpg" alt="">
+                  <input type="checkbox" name="main-course" value="">
+                </label>
+              </div>
+            </div>
           </div>
+          <button type="button" name="button" id="clickToDessert" class="btn btn-primary btn-sm">next</button>
+          <button type="button" name="button" id="clickBackToStarter" class="btn btn-secondary btn-sm">go back</button>
         </div>
-        <div class="col-md-2.4">
-          <div class="checkbox">
-            <label>
-              <img src="img/main-course/main-course2.jpeg" alt="">
-              <input type="checkbox" name="main-course" value="">
-            </label>
+        <div class="dessertForm">
+          <h3>Order the dessert</h3>
+          <div class="row">
+            <div class="col-md-2.4">
+              <div class="checkbox">
+                <label>
+                  <img src="img/dessert/dessert1.jpeg" alt="cheese plate picture">
+                  <input type="checkbox" name="dessert" value="1,2,3,4" checked>
+                </label>
+              </div>
+            </div>
+            <div class="col-md-2.4">
+              <div class="checkbox">
+                <label>
+                  <img src="img/dessert/dessert2.jpeg" alt="">
+                  <input type="checkbox" name="dessert" value="">
+                </label>
+              </div>
+            </div>
+            <div class="col-md-2.4">
+              <div class="checkbox">
+                <label>
+                  <img src="img/dessert/dessert3.jpeg" alt="">
+                  <input type="checkbox" name="dessert" value="">
+                </label>
+              </div>
+            </div>
+            <div class="col-md-2.4">
+              <div class="checkbox">
+                <label>
+                  <img src="img/dessert/dessert4.jpeg" alt="">
+                  <input type="checkbox" name="dessert" value="">
+                </label>
+              </div>
+            </div>
+            <div class="col-md-2.4">
+              <div class="checkbox">
+                <label>
+                  <img src="img/dessert/dessert5.jpg" alt="">
+                  <input type="checkbox" name="dessert" value="">
+                </label>
+              </div>
+            </div>
           </div>
+          <button type="button" name="button" id="clickBackToMainCourse" class="btn btn-secondary btn-sm">go back</button>
         </div>
-        <div class="col-md-2.4">
-          <div class="checkbox">
-            <label>
-              <img src="img/main-course/main-course3.jpeg" alt="">
-              <input type="checkbox" name="main-course" value="">
-            </label>
-          </div>
+        <div class="submitAllForms">
+          <button type="button" name="button" class="btn success">place order</button>
         </div>
-        <div class="col-md-2.4">
-          <div class="checkbox">
-            <label>
-              <img src="img/main-course/main-course4.jpeg" alt="">
-              <input type="checkbox" name="main-course" value="">
-            </label>
-          </div>
-        </div>
-        <div class="col-md-2.4">
-          <div class="checkbox">
-            <label>
-              <img src="img/main-course/main-course5.jpg" alt="">
-              <input type="checkbox" name="main-course" value="">
-            </label>
-          </div>
-        </div>
-      </div>
-      <button type="button" name="button" class="btn btn-primary btn-sm">next</button><button type="button" name="button" class="btn btn-secondary btn-sm">go back</button>
-
-      <h3>Order a dessert</h3>
-      <div class="row">
-        <div class="col-md-2.4">
-          <div class="checkbox">
-            <label>
-              <img src="img/dessert/dessert1.jpeg" alt="cheese plate picture">
-              <input type="checkbox" name="dessert" value="1,2,3,4" checked>
-            </label>
-          </div>
-        </div>
-        <div class="col-md-2.4">
-          <div class="checkbox">
-            <label>
-              <img src="img/dessert/dessert2.jpeg" alt="">
-              <input type="checkbox" name="dessert" value="">
-            </label>
-          </div>
-        </div>
-        <div class="col-md-2.4">
-          <div class="checkbox">
-            <label>
-              <img src="img/dessert/dessert3.jpeg" alt="">
-              <input type="checkbox" name="dessert" value="">
-            </label>
-          </div>
-        </div>
-        <div class="col-md-2.4">
-          <div class="checkbox">
-            <label>
-              <img src="img/dessert/dessert4.jpeg" alt="">
-              <input type="checkbox" name="dessert" value="">
-            </label>
-          </div>
-        </div>
-        <div class="col-md-2.4">
-          <div class="checkbox">
-            <label>
-              <img src="img/dessert/dessert5.jpg" alt="">
-              <input type="checkbox" name="dessert" value="">
-            </label>
-          </div>
-        </div>
-      </div>
-      <button type="button" name="button" class="btn btn-secondary btn-sm">go back</button><br>
-
-      <button type="button" name="button" class="btn success">place order</button>
-
       </form>
       <p class="story">Hi, you are such <span></span> a person, you always struggling to <span></span>. Some <span></span> flavor always comfort you, and your friend and family really appreciate that you always help to <span></span>. Here are something really matches your needs.</p>
-      
+
       <ul class="result">
 
       </ul>
