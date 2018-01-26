@@ -43,10 +43,11 @@ $(document).ready(function() {
   //     var bodyList = [];
   //     var afterTasteList = [];
   //
-     $("input:checkbox[name=drink]:checked").each(function(){
+     $("input:checkbox[name=totalForm]:checked").each(function(){
       var tasteResult = $(this).val();
       var tasteResultToArray = tasteResult.split(",");
       var fragrance = tasteResultToArray[0];
+
       fragranceList.push(parseInt(fragrance));
   //     var aroma = tasteResult[1];
   //     var sweetness = tasteResult[2];
@@ -58,7 +59,7 @@ $(document).ready(function() {
             totalFragrance += score;
           });
 
-          if (totalFragrance = 2 ) {
+          if (totalFragrance > 6 ) {
             alert(totalFragrance);
           }
     });
