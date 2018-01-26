@@ -1,8 +1,5 @@
 //business logic
-var totalFragrance = 0
-fragranceList.forEach(function(score){
-  totalFragrance += score;
-});
+
 
 //user interface logic
 $(document).ready(function() {
@@ -36,33 +33,34 @@ $(document).ready(function() {
     $(".dessertForm").hide();
     $(".mainCourseForm").show();
   });
-  // var movieResults = movieInfo.split("|");
-  // var movieName = movieResults[0];
-  // $("form#formOne").submit(function(event){
-  //    event.preventDefault();
-  //     var fragranceList = [];
+
+  $("form#formOne").submit(function(event){
+     event.preventDefault();
+      var fragranceList = [];
   //     var aromaList = [];
   //     var sweetnessList = [];
   //     var acidityList = [];
   //     var bodyList = [];
   //     var afterTasteList = [];
   //
-  //    $("input:checkbox[name=drink]:checked").each(function(){
-  //     var tasteResult = $(this).val().split(",");
-  //
-  //     var fragrance = tasteResult[0];
-  //     fragranceList.push(parseInt(fragrance));
+     $("input:checkbox[name=drink]:checked").each(function(){
+      var tasteResult = $(this).val();
+      var tasteResultToArray = tasteResult.split(",");
+      var fragrance = tasteResultToArray[0];
+      fragranceList.push(parseInt(fragrance));
   //     var aroma = tasteResult[1];
   //     var sweetness = tasteResult[2];
   //     var acidity = tasteResult[3];
   //     var body = tasteResult[4];
   //     var afterTaste = tasteResult[5];
-  //
-  //     if (totalFragrance >0) {
-  //       $(".story").show();
-  //     }
-  //   });
-  //
-  // });
+          var totalFragrance = 0;
+          fragranceList.forEach(function(score) {
+            totalFragrance += score;
+          });
 
+          if (totalFragrance = 2 ) {
+            alert(totalFragrance);
+          }
+    });
+  });
 });
