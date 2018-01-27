@@ -1,5 +1,5 @@
 //business logic
-function Portfolio(indexFragrance, indexAroma, indexSweetness, indexAcidity, indexBody, indexAfterTaste){
+function Portfolio(indexFragrance, indexAroma, indexSweetness, indexAcidity, indexBody, indexAfterTaste) {
   this.fragrance = indexFragrance;
   this.aroma = indexAroma;
   this.sweetness = indexSweetness;
@@ -30,7 +30,7 @@ Portfolio.prototype.getTasteAdj = function(){
   if ((this.sweetness < 10) && (this.acidity< 10)) {
     return "green-apple-like";
   } else if ((this.sweetness > 20) && (this.acidity > 20)) {
-    return "pine-apple-like";
+    return "pineapple-like";
   } else {
     return "winey";
   }
