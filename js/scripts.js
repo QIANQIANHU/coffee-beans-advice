@@ -18,21 +18,30 @@ Portfolio.prototype.getAdj = function(){
   }
 }
 Portfolio.prototype.getNoun = function(){
-  if ((this.sweetness < 10) && (this.acidity< 10)) {
-    return "restrain";
-  } else if ((this.sweetness > 20) && (this.acidity > 20)) {
-    return "gushy";
+  if ((this.body < 10) && (this.afterTaste< 10)) {
+    return "movie";
+  } else if ((this.body > 20) && (this.afterTaste > 20)) {
+    return "TV show";
   } else {
-    return "curious";
+    return "concert";
   }
 }
-Portfolio.prototype.getAdj = function(){
+Portfolio.prototype.getTasteAdj = function(){
   if ((this.sweetness < 10) && (this.acidity< 10)) {
-    return "restrain";
+    return "green-apple-like";
   } else if ((this.sweetness > 20) && (this.acidity > 20)) {
-    return "gushy";
+    return "pine-apple-like";
   } else {
-    return "curious";
+    return "winey";
+  }
+}
+Portfolio.prototype.getPhrase = function(){
+  if ((this.fragrance < 10) && (this.aroma< 10)) {
+    return "wash dishes";
+  } else if ((this.fragrance > 20) && (this.aroma > 20)) {
+    return "clean tables";
+  } else {
+    return "mop floor";
   }
 }
 
@@ -134,9 +143,9 @@ $(document).ready(function() {
 
     $(".story").show();
     $("#adj").append(newPortfolio.getAdj());
-    $("#noun").text("menu");
-    $("#tasteAdj").text("bitter");
-    $("#phrase").text("wash dishes");
+    $("#noun").text(newPortfolio.getNoun());
+    $("#tasteAdj").text(newPortfolio.getTasteAdj());
+    $("#phrase").text(newPortfolio.getPhrase());
 
 
   });
