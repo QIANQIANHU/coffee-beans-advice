@@ -1,5 +1,13 @@
 //business logic
-
+function Portfolio(fragranceIndex, aromaIndex, sweetnessIndex, acidityIndex, bodyIndex, afterTasteIndex){
+  this.fragrance = fragranceIndex;
+  this.aroma = aromaIndex;
+  this.sweetness = sweetnessIndex;
+  this.acidity = acidityIndex;
+  this.body = bodyIndex;
+  this.afterTaste = afterTasteIndex;
+  
+}
 
 //user interface logic
 $(document).ready(function() {
@@ -54,14 +62,15 @@ $(document).ready(function() {
   //     var acidity = tasteResult[3];
   //     var body = tasteResult[4];
   //     var afterTaste = tasteResult[5];
-          var totalFragrance = 0;
-          fragranceList.forEach(function(score) {
-            totalFragrance += score;
-          });
+      var totalFragrance = 0;
+      fragranceList.forEach(function(score) {
+        totalFragrance += score;
+      });
 
-          if (totalFragrance > 6 ) {
-            alert(totalFragrance);
-          }
+      if (totalFragrance > 6 ) {
+        alert(totalFragrance);
+      }
+
     });
   });
 });
