@@ -1,19 +1,19 @@
 //business logic
-function Portfolio(totalFragrance, totalAroma, totalSweetness, totalAcidity, totalBody, totalAfterTaste){
-  this.fragrance = totalFragrance;
-  this.aroma = totalAroma;
-  this.sweetness = totalSweetness;
-  this.acidity = totalAcidity;
-  this.body = totalBody;
-  this.afterTaste = totalAfterTaste;
+function Portfolio(indexFragrance, indexAroma, indexSweetness, indexAcidity, indexBody, indexAfterTaste){
+  this.fragrance = indexFragrance;
+  this.aroma = indexAroma;
+  this.sweetness = indexSweetness;
+  this.acidity = indexAcidity;
+  this.body = indexBody;
+  this.afterTaste = indexAfterTaste;
 }
 
 Portfolio.prototype.getAdj = function(){
-  if ((this.sweetness <= 10) &&(this.acidity <= 10)) {
+  if ((this.sweetness < 10)) {
     return "restrain";
-  } else if ((this.sweetness > 20) &&(this.acidity > 20)) {
+  } else if ((this.sweetness > 20)) {
     return "gushy";
-  }else {
+  } else {
     return "curious";
   }
 }
@@ -104,12 +104,13 @@ $(document).ready(function() {
       totalAfterTaste += score;
     });
 
+    var newPortfolio = new Portfolio(totalFragrance, totalAroma, totalSweetness, totalAcidity, totalBody, totalAfterTaste);
 
-      $(".story").show();
-      $("#adj").text(Portfolio.getAdj);
-      $("#noun").text("menu");
-      $("#tasteAdj").text("bitter");
-      $("#phrase").text("wash dishes");
+    $(".story").show();
+    $("#adj").append(newPortfolio.getAdj());
+    $("#noun").text("menu");
+    $("#tasteAdj").text("bitter");
+    $("#phrase").text("wash dishes");
 
 
   });
