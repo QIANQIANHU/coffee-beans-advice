@@ -9,14 +9,39 @@ function Portfolio(indexFragrance, indexAroma, indexSweetness, indexAcidity, ind
 }
 
 Portfolio.prototype.getAdj = function(){
-  if ((this.sweetness < 10)) {
+  if ((this.sweetness < 10) && (this.acidity< 10)) {
     return "restrain";
-  } else if ((this.sweetness > 20)) {
+  } else if ((this.sweetness > 20) && (this.acidity > 20)) {
     return "gushy";
   } else {
     return "curious";
   }
 }
+Portfolio.prototype.getNoun = function(){
+  if ((this.sweetness < 10) && (this.acidity< 10)) {
+    return "restrain";
+  } else if ((this.sweetness > 20) && (this.acidity > 20)) {
+    return "gushy";
+  } else {
+    return "curious";
+  }
+}
+Portfolio.prototype.getAdj = function(){
+  if ((this.sweetness < 10) && (this.acidity< 10)) {
+    return "restrain";
+  } else if ((this.sweetness > 20) && (this.acidity > 20)) {
+    return "gushy";
+  } else {
+    return "curious";
+  }
+}
+
+function resetResultsFields() {
+  $("#adj").text("");
+  $("#noun").text("");
+  $("#tasteAdj").text("");
+  $("#phrase").text("");
+};
 
 //user interface logic
 $(document).ready(function() {
@@ -53,6 +78,7 @@ $(document).ready(function() {
 
   $("form#formOne").submit(function(event){
      event.preventDefault();
+     resetResultsFields();
       var fragranceList = [];
       var aromaList = [];
       var sweetnessList = [];
