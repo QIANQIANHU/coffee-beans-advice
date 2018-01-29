@@ -52,6 +52,15 @@ function resetResultsFields() {
   $("#phrase").text("");
 };
 
+function calculateDistance(menuItem, userProfile) {
+  var result;
+  var total = 0;
+  for (i = 0; i < menuItem.length; i++) {
+    total += (menuItem[i] - userProfile[i]) * (menuItem[i] - userProfile[i]);
+  }
+  return Math.sqrt(total).toFixed(4);
+};
+
 //user interface logic
 $(document).ready(function() {
   $(".clickable").click(function() {
@@ -173,6 +182,23 @@ $(document).ready(function() {
     $("#noun").text(newPortfolio.getNoun());
     $("#tasteAdj").text(newPortfolio.getTasteAdj());
     $("#phrase").text(newPortfolio.getPhrase());
+
+
+    // /*
+    // calculate the distance
+    // */
+    // var menuItem1 = [3, 4, 5, 6, 8, 9];
+    // var menuItem2 = [4, 5, 6, 8, 1, 10];
+    // var userProfile = [3, 4, 5, 9, 10, 11]; // using the above example, this equals to [avgAroma, avgAcidity, ...]
+    //
+    // var distance1 = calculateDistance(menuItem1, userProfile);
+    // var distance2 = calculateDistance(menuItem2, userProfile);
+    //
+    // if (distance1 <= distance2) {
+    //   console.log("menuItem1 is more similar to user's teast");
+    // } else {
+    //   console.log("menuItem2 is more similar to user's teast");
+    // }
 
 
   });
