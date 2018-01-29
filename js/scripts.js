@@ -94,6 +94,7 @@ $(document).ready(function() {
       var acidityList = [];
       var bodyList = [];
       var afterTasteList = [];
+      var count = 0;
 
      $("input:checkbox[name=totalForm]:checked").each(function(){
       var tasteResult = $(this).val().split(",");
@@ -104,6 +105,7 @@ $(document).ready(function() {
       var acidity = tasteResult[3];
       var body = tasteResult[4];
       var afterTaste = tasteResult[5];
+      count += 1;
 
       fragranceList.push(parseInt(fragrance));
       aromaList.push(parseInt(aroma));
@@ -114,30 +116,55 @@ $(document).ready(function() {
 
     });
 
+
     var totalFragrance = 0;
     fragranceList.forEach(function(score) {
       totalFragrance += score;
     });
+    var avgFragrance = totalFragrance/count;
+
     var totalAroma = 0;
     aromaList.forEach(function(score) {
       totalAroma += score;
     });
+    var avgAroma = totalAroma/count;
+
     var totalSweetness = 0;
     sweetnessList.forEach(function(score) {
       totalSweetness += score;
     });
+    var avgSweetness = totalSweetness/count;
+
     var totalAcidity = 0;
     acidityList.forEach(function(score) {
       totalAcidity += score;
     });
+    var avgAcidity = totalAcidity/count;
+
     var totalBody = 0;
     bodyList.forEach(function(score) {
       totalBody += score;
     });
+    var avgAcidity = totalAcidity/count;
+
     var totalAfterTaste = 0;
     afterTasteList.forEach(function(score) {
       totalAfterTaste += score;
     });
+    var avgAfterTaste = totalAfterTaste/count;
+
+    /*
+    var list1, list2, list3;
+    var score1, score2, score3;
+    for (int i = 1; i < pictures.length; i++) {
+      var listName = "list" + i.toString();
+      var totalScore = "score" + i.toString();
+      listName.forEach(function(score) {
+        totalScore += score;
+      });
+    }
+    */
+
 
     var newPortfolio = new Portfolio(totalFragrance, totalAroma, totalSweetness, totalAcidity, totalBody, totalAfterTaste);
 
